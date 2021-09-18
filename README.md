@@ -7,6 +7,11 @@ A lightweight example of an e-store API with Flask, SQLite and Flask-RESTful.
     pip install flask-restful
     ```
 
+- Install the packages
+    ```
+    pip install -r requirements.txt
+    ```
+    
 - Run Flask 
     ```
     python api.py
