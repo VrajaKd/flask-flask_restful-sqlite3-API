@@ -92,5 +92,5 @@ api.add_resource(GetOrderDetails, '/api/orders/<order_id>')
 api.add_resource(UpdateOrderStatus, '/api/orders/<order_id>')
 
 
-if __name__ == '__main__':
-    app.run(debug=True)
+# if __name__ == '__main__':
+#     app.run(port=5500, debug=True)
