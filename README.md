@@ -7,9 +7,14 @@ A lightweight example of an e-store API with Flask, SQLite and Flask-RESTful.
     pip install flask-restful
     ```
 
+- Install the packages
+    ```
+    pip install -r requirements.txt
+    ```
+    
 - Run Flask 
     ```
-    python api.py
+    flask run --port=5000
     ```
 
 
@@ -17,44 +22,44 @@ A lightweight example of an e-store API with Flask, SQLite and Flask-RESTful.
 
 * GET /api/products - list of all available products
     ```
-    curl https://homework.solutional.ee/api/products
+    curl http://127.0.0.1:5000/api/products
     ```
 
 * POST /api/orders - create new order
     ```
-    curl -X POST https://homework.solutional.ee/api/orders
+    curl -X POST http://127.0.0.1:5000/api/orders
     ```
 
 * GET /api/orders/:order_id - get order details
     ```
-    curl https://homework.solutional.ee/api/orders/:order_id
+    curl http://127.0.0.1:5000/api/orders/:order_id
     ```
 
 * PATCH /api/orders/:order_id - update order
     ```
     curl -X PATCH --data '{"status": "PAID"}' -H "Content-Type: application/json" \
-      https://homework.solutional.ee/api/orders/:order_id
+      http://127.0.0.1:5000/api/orders/:order_id
     ```
 
 * GET /api/orders/:order_id/products - get order products
     ```
-    curl https://homework.solutional.ee/api/orders/:order_id/products
+    curl http://127.0.0.1:5000/api/orders/:order_id/products
     ```
 
 * POST /api/orders/:order_id/products - add products to order
     ```
     curl --data '[123]' -H "Content-Type: application/json" \
-      https://homework.solutional.ee/api/orders/:order_id/products
+      http://127.0.0.1:5000/api/orders/:order_id/products
     ```
 
 * PATCH /api/orders/:order_id/products/:product_id - update product quantity
     ```
     curl -X PATCH --data '{"quantity": 33}' -H "Content-Type: application/json" \
-      https://homework.solutional.ee/api/orders/:order_id/products/:product_id
+      http://127.0.0.1:5000/api/orders/:order_id/products/:product_id
     ```
 
 * PATCH /api/orders/:order_id/products/:product_id - add a replacement product
     ```
     curl -X PATCH --data '{"replaced_with": {"product_id": 123, "quantity": 6}}' -H "Content-Type: application/json" \
-      https://homework.solutional.ee/api/orders/:order_id/products/:product_id
+      http://127.0.0.1:5000/api/orders/:order_id/products/:product_id
     ```
